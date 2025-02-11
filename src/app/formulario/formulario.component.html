@@ -1,0 +1,39 @@
+<ion-header>formulario
+</ion-header>
+
+<ion-content padding>
+  <h2>Lista</h2>
+  <input #nameInput type="text" placeholder="Pelicula" />
+  <input #dateInput type="date" />
+  <input #prodInput type="text" placeholder="Productor" />
+  <input #casaInput type="text" placeholder="Casa productora" />
+  <input #protInput type="text" placeholder="Protagonista" />
+
+
+  <button (click)="addItem(nameInput.value, dateInput.value, prodInput.value, casaInput.value, protInput.value); nameInput.value = '';
+   dateInput.value = ''; prodInput.value = ''; casaInput.value = '';protInput.value = '';">
+    Agregar
+  </button>
+
+  <table border="1" style="margin-top: 20px; width: 100%; text-align: left">
+    <thead>
+      <tr>
+        <th>Pelicula</th>
+        <th>Lanzamiento</th>
+        <th>Productor</th>
+        <th>Casa productora</th>
+        <th>Protagonista</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of pelicula">
+        <td>{{ item.nombrePelicula }}</td>
+        <td>{{ item.lanzamiento }}</td>
+        <td>{{ item.productor }}</td>
+        <td>{{ item.productora }}</td>
+        <td>{{ item.protagonista }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
