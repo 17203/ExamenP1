@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Examen
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ng-container *ngIf="frase; else loading">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{frase.quote}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Autor: {{frase.author}}
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
 
   <div id="container">
     <ion-item routerLink="/formulario">ir a formulario</ion-item>
-    <ion-item routerLink="/test">ir a test</ion-item>
   </div>
+
+  <ng-template #loading>
+    <ion-spinner name="crescent">
+    </ion-spinner>
+  </ng-template>
 </ion-content>
