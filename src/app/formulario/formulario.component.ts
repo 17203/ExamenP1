@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonContent, IonHeader, } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.scss'],
-  imports: [IonContent, IonHeader, CommonModule]
+  imports: [IonContent, IonHeader, CommonModule, IonButton]
 })
 export class FormularioComponent implements OnInit {
 

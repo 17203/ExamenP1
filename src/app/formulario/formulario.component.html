@@ -10,10 +10,10 @@
   <input #protInput type="text" placeholder="Protagonista" />
 
 
-  <button (click)="addItem(nameInput.value, dateInput.value, prodInput.value, casaInput.value, protInput.value); nameInput.value = '';
+  <ion-button expand="block" color="dark" (click)="addItem(nameInput.value, dateInput.value, prodInput.value, casaInput.value, protInput.value); nameInput.value = '';
    dateInput.value = ''; prodInput.value = ''; casaInput.value = '';protInput.value = '';">
     Agregar
-  </button>
+  </ion-button>
 
   <table border="1" style="margin-top: 20px; width: 100%; text-align: left">
     <thead>
